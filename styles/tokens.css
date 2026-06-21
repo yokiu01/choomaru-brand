@@ -1,0 +1,99 @@
+/* ==========================================================================
+   MU:ON 디자인 토큰 v2 — 묵향 × 시네마틱 럭셔리 × 에디토리얼
+   원칙: solid + radial 미광 + 그레인. linear-gradient 장식 금지.
+   ========================================================================== */
+
+:root {
+  /* --- 먹 / 시네마틱 다크 --- */
+  --ink-950: #0b0b12; /* 시네마틱 베이스 (hero/footer) */
+  --ink-900: #111120;
+  --ink-800: #1a1a2e;
+  --ink-700: #2d2d44;
+
+  /* --- 한지 / 에디토리얼 라이트 --- */
+  --paper: #f4f1ea; /* 에디토리얼 배경 (한지) */
+  --paper-2: #ece7dd;
+  --paper-ink: #15151f; /* 라이트 위 텍스트 (거의 먹) */
+  --white: #ffffff;
+
+  /* --- 금 / 액센트 --- */
+  --gold: #c8a24a; /* 살짝 밝힌 골드 (다크 위 발광) */
+  --gold-deep: #b8860b;
+  --gold-dark: #8b6914;
+  --gold-soft: rgba(200, 162, 74, 0.14);
+  --gold-glow: rgba(200, 162, 74, 0.32);
+
+  /* --- 8 DNA 유형 컬러 --- */
+  --type-1: #c0392b; /* 파워풀 */
+  --type-2: #2e5a8b; /* 정밀 */
+  --type-3: #4a5a5a; /* 미니멀 */
+  --type-4: #7a3b7a; /* 표현자 */
+  --type-5: #c65d2a; /* 테크니션 */
+  --type-6: #6b4423; /* 클래시컬 */
+  --type-7: #b8860b; /* 그루버 */
+  --type-8: #2d7a7a; /* 실루엣 */
+
+  /* --- Gray --- */
+  --gray-100: #f5f5f5;
+  --gray-200: #e6e2da;
+  --gray-300: #d4cec3;
+  --gray-500: #9a948a;
+  --gray-600: #6f6a62;
+  --gray-700: #4a463f;
+
+  /* --- 시맨틱 --- */
+  --color-bg: var(--paper);
+  --color-surface: var(--white);
+  --color-text: var(--paper-ink);
+  --color-text-muted: var(--gray-600);
+  --color-line: var(--gray-300);
+  --color-accent: var(--gold-deep);
+
+  /* --- 폰트 --- */
+  --font-serif: "Gowun Batang", Georgia, "Nanum Myeongjo", serif;
+  --font-sans: "Pretendard", -apple-system, BlinkMacSystemFont, system-ui,
+    "Segoe UI", sans-serif;
+
+  /* --- 타이포 스케일 (PC 가독 우선으로 축소) --- */
+  --text-mega: clamp(2.4rem, 5.2vw, 4.5rem); /* hero/CTA 초대형 */
+  --text-hero: clamp(2.1rem, 4.4vw, 3.6rem);
+  --text-display: clamp(1.8rem, 3.2vw, 2.8rem);
+  --text-title: clamp(1.55rem, 2.4vw, 2.1rem);
+  --text-index: clamp(2.2rem, 4.2vw, 4rem); /* 에디토리얼 번호 */
+  --text-lead: clamp(1rem, 1.3vw, 1.15rem);
+  --text-body: 1rem;
+  --text-sm: 0.875rem;
+  --text-xs: 0.75rem;
+
+  /* --- 간격 --- */
+  --space-section: clamp(5rem, 9vw, 9rem);
+  --container: 1340px;
+  --container-narrow: 920px;
+  --container-wide: 1600px;
+  --gutter: clamp(1.25rem, 5vw, 5rem);
+
+  /* --- 모양 --- */
+  --radius-card: 6px; /* 에디토리얼: 거의 각진 */
+  --radius-lg: 14px;
+  --radius-pill: 9999px;
+
+  /* --- 그림자 --- */
+  --shadow-card: 0 18px 60px rgba(11, 11, 18, 0.12);
+  --shadow-card-hover: 0 32px 90px rgba(11, 11, 18, 0.22);
+  --shadow-glow: 0 0 80px var(--gold-glow);
+
+  /* --- 모션 --- */
+  --dur-fast: 180ms;
+  --dur: 420ms;
+  --dur-slow: 900ms;
+  --dur-cine: 1300ms;
+  --ease-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-soft: cubic-bezier(0.33, 1, 0.68, 1);
+  --ease-cine: cubic-bezier(0.65, 0, 0.35, 1);
+
+  /* --- z --- */
+  --z-grain: 9000;
+  --z-cursor: 9500;
+  --z-progress: 9600;
+  --z-nav: 100;
+}

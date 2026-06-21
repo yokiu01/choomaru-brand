@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>기술 — 춤마루 | 춤을 읽는 AI</title>
+    <meta
+      name="description"
+      content="춤마루의 기술 — MediaPipe 33관절 자세 추정, Attention 기반 BI-LSTM 감정 분류(18클래스), 한국무용 3D 스켈레톤 데이터셋과 라벨링 도구, 특허 포트폴리오."
+    />
+    <meta name="theme-color" content="#0b0b12" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" crossorigin="anonymous" />
+    <link rel="stylesheet" href="styles/tokens.css" />
+    <link rel="stylesheet" href="styles/typography.css" />
+    <link rel="stylesheet" href="styles/global.css" />
+    <link rel="stylesheet" href="styles/sections.css" />
+    <link rel="stylesheet" href="styles/sections-2.css" />
+    <link rel="stylesheet" href="styles/pages.css" />
+  </head>
+  <body>
+    <a class="visually-hidden" href="#main">본문 바로가기</a>
+    <div class="scroll-progress" aria-hidden="true"></div>
+    <div class="cursor" aria-hidden="true"></div>
+    <div class="cursor-ring" aria-hidden="true"></div>
+
+    <header class="nav" id="nav">
+      <div class="container nav__inner">
+        <a class="wordmark" href="index.html" aria-label="춤마루 홈">춤마루<span class="wordmark__rom">CHOOMARU</span></a>
+        <nav class="nav__links" aria-label="주요 메뉴">
+          <a class="nav__link" href="about.html" data-en="About">소개</a>
+          <a class="nav__link" href="services.html" data-en="Services">서비스</a>
+          <a class="nav__link" href="dna.html" data-en="Dance DNA">춤 DNA</a>
+          <a class="nav__link is-current" href="technology.html" aria-current="page" data-en="Technology">기술</a>
+          <a class="nav__link" href="contact.html" data-en="Contact">문의</a>
+        </nav>
+        <div class="nav__actions">
+          <div class="lang-toggle" role="group" aria-label="언어 선택">
+            <button type="button" data-lang="ko" class="is-active">KR</button>
+            <button type="button" data-lang="en">EN</button>
+          </div>
+          <a class="btn btn-gold nav__cta magnetic" href="dna.html" data-en="DNA Test">춤 DNA 테스트</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="page-hero">
+        <div class="container">
+          <nav class="breadcrumb" aria-label="위치">
+            <a href="index.html" data-en="Home">홈</a><span class="sep">/</span>
+            <span data-en="Technology">기술</span>
+          </nav>
+          <h1 class="page-hero__title serif" data-split data-en="The AI that reads dance">춤을 읽는 AI</h1>
+          <p class="page-hero__lead" data-en="Pose estimation meets emotion classification, trained on a Korean-dance dataset we built ourselves.">
+            자세 추정과 감정 분류가 만나는 곳 — 우리가 직접 구축한 한국무용
+            데이터셋 위에서 학습합니다.
+          </p>
+        </div>
+      </section>
+
+      <!-- ===== 숫자 ===== -->
+      <section class="section section--paper">
+        <div class="container">
+          <div class="stat-grid">
+            <div class="stat" data-reveal>
+              <div class="stat__num count" data-to="33">0</div>
+              <div class="stat__label" data-en="MediaPipe joint points">MediaPipe 관절 포인트</div>
+            </div>
+            <div class="stat" data-reveal style="--rd:80ms">
+              <div class="stat__num count" data-to="18">0</div>
+              <div class="stat__label" data-en="Emotion classes (6 registers)">감정 클래스 (6범주)</div>
+            </div>
+            <div class="stat" data-reveal style="--rd:160ms">
+              <div class="stat__num count" data-to="26" data-suffix="+">0</div>
+              <div class="stat__label" data-en="Labeled expert clips">라벨링된 전문가 영상</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== 파이프라인 ===== -->
+      <section class="section section--cine" id="pipeline">
+        <div class="container">
+          <div class="ed-head">
+            <h2 class="ed-head__title serif on-dark" data-en="The pipeline">처리 파이프라인</h2>
+            <p class="ed-head__meta" data-en="From a webcam frame to a personalized cue, in five stages.">
+              웹캠 한 프레임에서 개인 맞춤 피드백까지, 다섯 단계.
+            </p>
+          </div>
+          <div class="tech__grid">
+            <div>
+              <div class="pipeline" data-reveal>
+                <div class="pipeline__step"><span class="n">01</span><strong data-en="Webcam">웹캠</strong><span data-en="motion capture">동작 캡처</span></div>
+                <div class="pipeline__step"><span class="n">02</span><strong>MediaPipe</strong><span data-en="33 joint extraction">33 관절 추출</span></div>
+                <div class="pipeline__step"><span class="n">03</span><strong data-en="Normalization">정규화</strong><span data-en="scale · rotation invariant">스케일·회전 보정</span></div>
+                <div class="pipeline__step"><span class="n">04</span><strong>BI-LSTM + Attention</strong><span data-en="temporal emotion model">시계열 감정 모델</span></div>
+                <div class="pipeline__step"><span class="n">05</span><strong data-en="18 Emotions + cue">18 감정 + 피드백</strong><span data-en="personalized">개인 맞춤</span></div>
+              </div>
+              <p class="tech__note" data-en="Built and trained in-house — not an off-the-shelf wrapper.">
+                <span class="gold">자체 설계·학습</span> — 기성 모델 래퍼가 아닙니다.
+              </p>
+            </div>
+            <div class="placeholder placeholder--dark" style="min-height:420px" data-parallax="0.08" aria-hidden="true">
+              <span class="placeholder__label"><strong>관절 오버레이 시각화</strong>33관절 스켈레톤 + 감정 분류 데모 영상</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== 데이터셋 / 라벨링 ===== -->
+      <section class="section section--paper">
+        <div class="container">
+          <article class="feature">
+            <div class="feature__media placeholder" data-parallax="0.06" aria-hidden="true">
+              <span class="placeholder__label"><strong>3D 스켈레톤 라벨링 툴</strong>관절 뷰어 · 프레임 타임라인</span>
+            </div>
+            <div class="feature__body">
+              <p class="kicker feature__kicker" data-en="Data">데이터</p>
+              <h2 class="feature__title serif" data-en="A dataset built motion by motion">동작 단위로 쌓은 데이터셋</h2>
+              <p class="text-muted" data-en="We label Korean dance as 3D skeletons with our own viewer — frame by frame, joint by joint, verified with professional dancers.">
+                우리는 자체 뷰어로 한국무용을 3D 스켈레톤으로 라벨링합니다. 프레임
+                단위, 관절 단위로, 전문 무용수와 함께 검증하면서요.
+              </p>
+              <ul class="feature__list">
+                <li data-en="MediaPipe 33-joint 3D skeletons">MediaPipe 33관절 3D 스켈레톤</li>
+                <li data-en="Frame-level emotion & motion labels">프레임 단위 감정·동작 라벨</li>
+                <li data-en="Expert-verified ground truth">전문가 검증 정답 데이터</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ===== 특허 / 연구 ===== -->
+      <section class="section section--paper-2">
+        <div class="container">
+          <div class="ed-head">
+            <h2 class="ed-head__title serif" data-en="Patents & Research">특허 · 연구</h2>
+            <p class="ed-head__meta" data-en="Methods we invented, protected and published.">
+              우리가 만든 방법 — 보호하고, 공유합니다.
+            </p>
+          </div>
+          <div class="value-grid">
+            <div class="value-card" data-reveal>
+              <div class="value-card__num">①</div>
+              <h3 class="value-card__title" data-en="Motion-analysis patents">동작 분석 특허</h3>
+              <p class="value-card__desc" data-en="Methods for scoring and giving feedback on traditional-dance movement.">
+                전통무용 동작을 채점하고 피드백하는 방법에 대한 특허군.
+              </p>
+            </div>
+            <div class="value-card" data-reveal style="--rd:80ms">
+              <div class="value-card__num">②</div>
+              <h3 class="value-card__title" data-en="Emotion classification">감정 분류 모델</h3>
+              <p class="value-card__desc" data-en="An 18-class affect model tailored to Korean dance, not generic emotion sets.">
+                일반 감정셋이 아닌, 한국무용에 맞춘 18클래스 정서 모델.
+              </p>
+            </div>
+            <div class="value-card" data-reveal style="--rd:160ms">
+              <div class="value-card__num">③</div>
+              <h3 class="value-card__title" data-en="Academic collaboration">학술 협업</h3>
+              <p class="value-card__desc" data-en="Joint research with dance scholars and engineering labs.">
+                무용 학자 및 공학 연구실과의 공동 연구.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--cine cta">
+        <div class="container container-narrow">
+          <h2 class="mega serif cta__title" data-split data-en="Build on our stack.">우리의 스택 위에서 만드세요.</h2>
+          <div class="cta__actions" data-reveal>
+            <a class="btn btn-gold magnetic" href="contact.html" data-en="Partner with us">기술 제휴 문의 <span class="arrow" aria-hidden="true">→</span></a>
+            <a class="btn btn-ghost magnetic" href="services.html#ai" data-en="See the API">API 보기</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container container-wide">
+        <div class="footer__mark" data-parallax="0.05" aria-hidden="true">춤마루</div>
+        <div class="footer__cols">
+          <div><p class="footer__tagline" data-en="Korean dance culture-tech. Carrying the tradition into today.">한국무용 컬처테크. 전통을 오늘의 몸짓으로 잇습니다.</p></div>
+          <div class="footer__col">
+            <h4 data-en="Services">서비스</h4>
+            <a href="services.html#muon" data-en="MU:ON App">MU:ON 앱</a>
+            <a href="services.html#muv" data-en="MU:V Store">MU:V 쇼핑몰</a>
+            <a href="dna.html" data-en="Dance DNA">춤 DNA 테스트</a>
+            <a href="technology.html" data-en="Technology">AI 기술</a>
+          </div>
+          <div class="footer__col">
+            <h4 data-en="Company">회사</h4>
+            <a href="about.html" data-en="About">소개</a>
+            <a href="technology.html" data-en="Technology">기술</a>
+            <a href="contact.html" data-en="Contact">문의</a>
+          </div>
+          <div class="footer__col">
+            <h4 data-en="Legal">정책</h4>
+            <a href="#" data-en="Privacy Policy">개인정보처리방침</a>
+            <a href="#" data-en="Terms of Service">이용약관</a>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <span>© 2026 춤마루 (Choomaru). All rights reserved.</span>
+          <span data-en="Reinterpreting Korean dance with AI.">한국의 몸짓을 AI로 잇습니다.</span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/i18n.js" defer></script>
+    <script src="js/motion.js" defer></script>
+    <script src="js/main.js" defer></script>
+  </body>
+</html>

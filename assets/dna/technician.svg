@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <!-- 테크니션: 정교한 기술 - 톱니/기어 느낌의 정밀한 각 -->
+  <!-- 중심 원 -->
+  <circle cx="32" cy="32" r="8" stroke="currentColor" stroke-width="3" fill="none"/>
+  <!-- 정교한 돌출부 - 기술의 날카로움 -->
+  <path d="M32 8 L32 20" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+  <path d="M32 44 L32 56" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+  <path d="M8 32 L20 32" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+  <path d="M44 32 L56 32" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+  <!-- 대각선 - 정밀함 강조 -->
+  <path d="M15 15 L23 23" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M41 41 L49 49" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M49 15 L41 23" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M23 41 L15 49" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- 중심점 -->
+  <circle cx="32" cy="32" r="3" fill="currentColor"/>
+</svg>

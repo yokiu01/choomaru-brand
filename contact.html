@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>문의 — 춤마루 | 제휴 · 투자 · 교육</title>
+    <meta
+      name="description"
+      content="춤마루에 문의하세요 — 교육기관 제휴, 투자, 기술 제휴, 일반 문의. 한국무용 컬처테크 브랜드 춤마루."
+    />
+    <meta name="theme-color" content="#0b0b12" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" crossorigin="anonymous" />
+    <link rel="stylesheet" href="styles/tokens.css" />
+    <link rel="stylesheet" href="styles/typography.css" />
+    <link rel="stylesheet" href="styles/global.css" />
+    <link rel="stylesheet" href="styles/sections.css" />
+    <link rel="stylesheet" href="styles/sections-2.css" />
+    <link rel="stylesheet" href="styles/pages.css" />
+  </head>
+  <body>
+    <a class="visually-hidden" href="#main">본문 바로가기</a>
+    <div class="scroll-progress" aria-hidden="true"></div>
+    <div class="cursor" aria-hidden="true"></div>
+    <div class="cursor-ring" aria-hidden="true"></div>
+
+    <header class="nav" id="nav">
+      <div class="container nav__inner">
+        <a class="wordmark" href="index.html" aria-label="춤마루 홈">춤마루<span class="wordmark__rom">CHOOMARU</span></a>
+        <nav class="nav__links" aria-label="주요 메뉴">
+          <a class="nav__link" href="about.html" data-en="About">소개</a>
+          <a class="nav__link" href="services.html" data-en="Services">서비스</a>
+          <a class="nav__link" href="dna.html" data-en="Dance DNA">춤 DNA</a>
+          <a class="nav__link" href="technology.html" data-en="Technology">기술</a>
+          <a class="nav__link is-current" href="contact.html" aria-current="page" data-en="Contact">문의</a>
+        </nav>
+        <div class="nav__actions">
+          <div class="lang-toggle" role="group" aria-label="언어 선택">
+            <button type="button" data-lang="ko" class="is-active">KR</button>
+            <button type="button" data-lang="en">EN</button>
+          </div>
+          <a class="btn btn-gold nav__cta magnetic" href="dna.html" data-en="DNA Test">춤 DNA 테스트</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="page-hero">
+        <div class="container">
+          <nav class="breadcrumb" aria-label="위치">
+            <a href="index.html" data-en="Home">홈</a><span class="sep">/</span>
+            <span data-en="Contact">문의</span>
+          </nav>
+          <h1 class="page-hero__title serif" data-split data-en="Work with Choomaru">춤마루와 함께하기</h1>
+          <p class="page-hero__lead" data-en="Education partners, investors, and collaborators — tell us what you have in mind.">
+            교육기관 · 투자 · 제휴 — 무엇을 구상하고 계신지 들려주세요.
+          </p>
+        </div>
+      </section>
+
+      <section class="section section--paper">
+        <div class="container contact__grid">
+          <div class="contact__intro" data-reveal>
+            <p class="kicker" data-en="Get in touch">연락</p>
+            <h2 class="display serif" data-en="Let's talk">이야기 나눠요</h2>
+            <p class="lead" data-en="We reply within a few business days. For press or partnerships, mention it in your message.">
+              영업일 기준 며칠 안에 답변드립니다. 보도·제휴 건은 메시지에 함께
+              적어주세요.
+            </p>
+            <p class="contact__channels" data-en="Email">
+              이메일 <a href="mailto:hello@choomaru.kr">hello@choomaru.kr</a>
+            </p>
+          </div>
+
+          <form class="form" id="contact-form" novalidate data-reveal style="--rd:120ms">
+            <div class="field field--row">
+              <label for="f-name"><span class="ln">01</span> <span data-en="Name">이름</span></label>
+              <div>
+                <input id="f-name" name="name" type="text" autocomplete="name" placeholder="홍길동" required />
+                <p class="field__error" data-en="Please enter your name.">이름을 입력해 주세요.</p>
+              </div>
+            </div>
+            <div class="field field--row">
+              <label for="f-org"><span class="ln">02</span> <span data-en="Organization">소속</span></label>
+              <input id="f-org" name="org" type="text" autocomplete="organization" placeholder="춤마루" />
+            </div>
+            <div class="field field--row">
+              <label for="f-type"><span class="ln">03</span> <span data-en="Inquiry type">문의 유형</span></label>
+              <div>
+                <select id="f-type" name="type" required>
+                  <option value="" data-en="Select…">선택하세요…</option>
+                  <option value="education" data-en="Education / Institution">교육기관</option>
+                  <option value="invest" data-en="Investment">투자</option>
+                  <option value="partner" data-en="Partnership">제휴</option>
+                  <option value="etc" data-en="Other">기타</option>
+                </select>
+                <p class="field__error" data-en="Please choose a type.">유형을 선택해 주세요.</p>
+              </div>
+            </div>
+            <div class="field field--row">
+              <label for="f-email"><span class="ln">04</span> <span data-en="Email">이메일</span></label>
+              <div>
+                <input id="f-email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required />
+                <p class="field__error" data-en="Please enter a valid email.">올바른 이메일을 입력해 주세요.</p>
+              </div>
+            </div>
+            <div class="field field--row">
+              <label for="f-msg"><span class="ln">05</span> <span data-en="Message">메시지</span></label>
+              <div>
+                <textarea id="f-msg" name="message" placeholder="…" required></textarea>
+                <p class="field__error" data-en="Please enter a message.">내용을 입력해 주세요.</p>
+              </div>
+            </div>
+            <div class="hp" aria-hidden="true">
+              <label for="f-website">Website</label>
+              <input id="f-website" name="website" type="text" tabindex="-1" autocomplete="off" />
+            </div>
+            <button class="btn btn-solid form__submit magnetic" type="submit" data-en="Send inquiry">
+              문의 보내기 <span class="arrow" aria-hidden="true">→</span>
+            </button>
+            <p class="form__status" id="form-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container container-wide">
+        <div class="footer__mark" data-parallax="0.05" aria-hidden="true">춤마루</div>
+        <div class="footer__cols">
+          <div><p class="footer__tagline" data-en="Korean dance culture-tech. Carrying the tradition into today.">한국무용 컬처테크. 전통을 오늘의 몸짓으로 잇습니다.</p></div>
+          <div class="footer__col">
+            <h4 data-en="Services">서비스</h4>
+            <a href="services.html#muon" data-en="MU:ON App">MU:ON 앱</a>
+            <a href="services.html#muv" data-en="MU:V Store">MU:V 쇼핑몰</a>
+            <a href="dna.html" data-en="Dance DNA">춤 DNA 테스트</a>
+            <a href="technology.html" data-en="Technology">AI 기술</a>
+          </div>
+          <div class="footer__col">
+            <h4 data-en="Company">회사</h4>
+            <a href="about.html" data-en="About">소개</a>
+            <a href="technology.html" data-en="Technology">기술</a>
+            <a href="contact.html" data-en="Contact">문의</a>
+          </div>
+          <div class="footer__col">
+            <h4 data-en="Legal">정책</h4>
+            <a href="#" data-en="Privacy Policy">개인정보처리방침</a>
+            <a href="#" data-en="Terms of Service">이용약관</a>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <span>© 2026 춤마루 (Choomaru). All rights reserved.</span>
+          <span data-en="Reinterpreting Korean dance with AI.">한국의 몸짓을 AI로 잇습니다.</span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/i18n.js" defer></script>
+    <script src="js/motion.js" defer></script>
+    <script src="js/main.js" defer></script>
+  </body>
+</html>

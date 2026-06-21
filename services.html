@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>서비스 — 춤마루 | MU:ON · MU:V · 춤 DNA</title>
+    <meta
+      name="description"
+      content="춤마루의 서비스 — AI 한국무용 교육 앱 MU:ON, 무용 라이프스타일 쇼핑몰 MU:V, 춤 DNA 진단, AI API와 라벨링 도구, 인터랙티브 데모."
+    />
+    <meta name="theme-color" content="#0b0b12" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" crossorigin="anonymous" />
+    <link rel="stylesheet" href="styles/tokens.css" />
+    <link rel="stylesheet" href="styles/typography.css" />
+    <link rel="stylesheet" href="styles/global.css" />
+    <link rel="stylesheet" href="styles/sections.css" />
+    <link rel="stylesheet" href="styles/sections-2.css" />
+    <link rel="stylesheet" href="styles/pages.css" />
+  </head>
+  <body>
+    <a class="visually-hidden" href="#main">본문 바로가기</a>
+    <div class="scroll-progress" aria-hidden="true"></div>
+    <div class="cursor" aria-hidden="true"></div>
+    <div class="cursor-ring" aria-hidden="true"></div>
+
+    <header class="nav" id="nav">
+      <div class="container nav__inner">
+        <a class="wordmark" href="index.html" aria-label="춤마루 홈">춤마루<span class="wordmark__rom">CHOOMARU</span></a>
+        <nav class="nav__links" aria-label="주요 메뉴">
+          <a class="nav__link" href="about.html" data-en="About">소개</a>
+          <a class="nav__link is-current" href="services.html" aria-current="page" data-en="Services">서비스</a>
+          <a class="nav__link" href="dna.html" data-en="Dance DNA">춤 DNA</a>
+          <a class="nav__link" href="technology.html" data-en="Technology">기술</a>
+          <a class="nav__link" href="contact.html" data-en="Contact">문의</a>
+        </nav>
+        <div class="nav__actions">
+          <div class="lang-toggle" role="group" aria-label="언어 선택">
+            <button type="button" data-lang="ko" class="is-active">KR</button>
+            <button type="button" data-lang="en">EN</button>
+          </div>
+          <a class="btn btn-gold nav__cta magnetic" href="dna.html" data-en="DNA Test">춤 DNA 테스트</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="page-hero">
+        <div class="container">
+          <nav class="breadcrumb" aria-label="위치">
+            <a href="index.html" data-en="Home">홈</a><span class="sep">/</span>
+            <span data-en="Services">서비스</span>
+          </nav>
+          <h1 class="page-hero__title serif" data-split data-en="One heritage, three doors">하나의 전통, 세 개의 문</h1>
+          <p class="page-hero__lead" data-en="An app that teaches it, a store that dresses it, a test that introduces it — all on the same AI engine.">
+            가르치는 앱, 입히는 쇼핑몰, 안내하는 진단 — 모두 같은 AI 엔진 위에서.
+          </p>
+        </div>
+      </section>
+
+      <section class="section section--paper">
+        <div class="container">
+          <!-- MU:ON -->
+          <article class="svc" id="muon">
+            <div>
+              <p class="svc__tag" data-en="App · iOS / Android">앱 · iOS / Android</p>
+              <h2 class="svc__name">MU:ON<span class="rom">무온</span></h2>
+            </div>
+            <div class="svc__body">
+              <div class="placeholder" style="aspect-ratio:16/9;margin-bottom:1.5rem" aria-hidden="true"><span class="placeholder__label"><strong>MU:ON 앱 화면</strong>레슨 · 동작 분석 UI 캡처</span></div>
+              <p class="lead" data-en="A pocket Korean-dance studio. Follow expert clips, get real-time feedback from pose AI, and level up.">
+                주머니 속 한국무용 스튜디오. 전문가 영상을 따라하고, 자세 AI의
+                실시간 피드백을 받으며 성장합니다.
+              </p>
+              <ul class="feature__list">
+                <li data-en="Real-time motion analysis (MediaPipe pose)">실시간 동작 분석 (MediaPipe 자세 인식)</li>
+                <li data-en="Gamified lessons, levels and rewards">게이미피케이션 레슨 · 레벨 · 보상</li>
+                <li data-en="Expert demonstration clips (basic · extended · creative)">전문가 시연 영상 (기본 · 확장 · 창작)</li>
+                <li data-en="Synced with your Dance DNA result">춤 DNA 결과와 연동</li>
+              </ul>
+              <a class="svc__link" href="contact.html" data-en="App Store / Google Play">앱스토어 / 구글플레이 <span class="arrow" aria-hidden="true">→</span></a>
+            </div>
+          </article>
+
+          <!-- MU:V -->
+          <article class="svc" id="muv">
+            <div>
+              <p class="svc__tag" data-en="Commerce">커머스</p>
+              <h2 class="svc__name">MU:V<span class="rom">무브</span></h2>
+            </div>
+            <div class="svc__body">
+              <div class="placeholder" style="aspect-ratio:16/9;margin-bottom:1.5rem" aria-hidden="true"><span class="placeholder__label"><strong>MU:V 쇼핑몰 화면</strong>제품 그리드 · 상세 컷</span></div>
+              <p class="lead" data-en="The dance lifestyle store. Practice wear, hanbok-inspired pieces, and gear — curated for movers.">
+                무용 라이프스타일 쇼핑몰. 연습복, 한복 모티브 의류, 용품을 움직이는
+                사람을 위해 큐레이션합니다.
+              </p>
+              <ul class="feature__list">
+                <li data-en="Practice & performance wear">연습복 · 무대 의상</li>
+                <li data-en="Hanbok-inspired everyday goods">한복 모티브 일상 굿즈</li>
+                <li data-en="Props, shoes and accessories">소품 · 신발 · 액세서리</li>
+                <li data-en="Member benefits linked with MU:ON">MU:ON 연동 멤버 혜택</li>
+              </ul>
+              <a class="svc__link" href="contact.html" data-en="shop.choomaru.kr">shop.choomaru.kr <span class="arrow" aria-hidden="true">→</span></a>
+            </div>
+          </article>
+
+          <!-- 춤 DNA -->
+          <article class="svc" id="dna">
+            <div>
+              <p class="svc__tag" data-en="Web · Diagnosis">웹 · 진단</p>
+              <h2 class="svc__name" data-en="Dance DNA Test">춤 DNA 테스트<span class="rom">DANCE DNA</span></h2>
+            </div>
+            <div class="svc__body">
+              <p class="lead" data-en="Twelve story-driven questions sort you into one of 8 dance types — the lightest, most shareable way into Choomaru.">
+                스토리 기반 12문항으로 8가지 춤 유형을 진단합니다. 가장 가볍고
+                공유하기 좋은 춤마루의 입구.
+              </p>
+              <a class="svc__link" href="dna.html" data-en="Take the test">테스트 하러 가기 <span class="arrow" aria-hidden="true">→</span></a>
+            </div>
+          </article>
+
+          <!-- AI API / 라벨링 -->
+          <article class="svc" id="ai">
+            <div>
+              <p class="svc__tag" data-en="API · Tooling">API · 툴링</p>
+              <h2 class="svc__name" data-en="AI API & Labeling">AI API · 라벨링<span class="rom">FOR DEVELOPERS</span></h2>
+            </div>
+            <div class="svc__body">
+              <p class="lead" data-en="The emotion-classification API and a 3D skeleton labeling tool — the same stack we build on, opened to partners.">
+                감정 분류 API와 3D 스켈레톤 라벨링 도구. 우리가 쓰는 스택을 그대로
+                파트너에게 엽니다.
+              </p>
+              <a class="svc__link" href="technology.html" data-en="Explore the technology">기술 자세히 보기 <span class="arrow" aria-hidden="true">→</span></a>
+            </div>
+          </article>
+
+          <!-- 데모 -->
+          <article class="svc" id="demo">
+            <div>
+              <p class="svc__tag" data-en="Web · Webcam">웹 · 웹캠</p>
+              <h2 class="svc__name" data-en="Interactive Demo">인터랙티브 데모<span class="rom">TRY IN BROWSER</span></h2>
+            </div>
+            <div class="svc__body">
+              <p class="lead" data-en="Follow basic motions through your webcam and generate your own dance memes — right in the browser.">
+                웹캠으로 기본 동작을 따라하고 나만의 춤 밈을 만듭니다. 브라우저에서
+                바로.
+              </p>
+              <a class="svc__link" href="contact.html" data-en="demo.choomaru.kr">demo.choomaru.kr <span class="arrow" aria-hidden="true">→</span></a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section--cine cta">
+        <div class="container container-narrow">
+          <h2 class="mega serif cta__title" data-split data-en="Not sure where to start?">어디서 시작할지 모르겠다면?</h2>
+          <div class="cta__actions" data-reveal>
+            <a class="btn btn-gold magnetic" href="dna.html" data-en="Find your type">내 유형부터 찾기 <span class="arrow" aria-hidden="true">→</span></a>
+            <a class="btn btn-ghost magnetic" href="contact.html" data-en="Talk to us">문의하기</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container container-wide">
+        <div class="footer__mark" data-parallax="0.05" aria-hidden="true">춤마루</div>
+        <div class="footer__cols">
+          <div><p class="footer__tagline" data-en="Korean dance culture-tech. Carrying the tradition into today.">한국무용 컬처테크. 전통을 오늘의 몸짓으로 잇습니다.</p></div>
+          <div class="footer__col">
+            <h4 data-en="Services">서비스</h4>
+            <a href="services.html#muon" data-en="MU:ON App">MU:ON 앱</a>
+            <a href="services.html#muv" data-en="MU:V Store">MU:V 쇼핑몰</a>
+            <a href="dna.html" data-en="Dance DNA">춤 DNA 테스트</a>
+            <a href="technology.html" data-en="Technology">AI 기술</a>
+          </div>
+          <div class="footer__col">
+            <h4 data-en="Company">회사</h4>
+            <a href="about.html" data-en="About">소개</a>
+            <a href="technology.html" data-en="Technology">기술</a>
+            <a href="contact.html" data-en="Contact">문의</a>
+          </div>
+          <div class="footer__col">
+            <h4 data-en="Legal">정책</h4>
+            <a href="#" data-en="Privacy Policy">개인정보처리방침</a>
+            <a href="#" data-en="Terms of Service">이용약관</a>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <span>© 2026 춤마루 (Choomaru). All rights reserved.</span>
+          <span data-en="Reinterpreting Korean dance with AI.">한국의 몸짓을 AI로 잇습니다.</span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/i18n.js" defer></script>
+    <script src="js/motion.js" defer></script>
+    <script src="js/main.js" defer></script>
+  </body>
+</html>

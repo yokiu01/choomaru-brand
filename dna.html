@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>춤 DNA — 춤마루 | 8가지 춤 유형 진단</title>
+    <meta
+      name="description"
+      content="춤마루 춤 DNA 테스트 — 12문항으로 8가지 춤 유형을 진단합니다. 파워풀·정밀·미니멀·표현자·테크니션·클래시컬·그루버·실루엣."
+    />
+    <meta name="theme-color" content="#0b0b12" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" crossorigin="anonymous" />
+    <link rel="stylesheet" href="styles/tokens.css" />
+    <link rel="stylesheet" href="styles/typography.css" />
+    <link rel="stylesheet" href="styles/global.css" />
+    <link rel="stylesheet" href="styles/sections.css" />
+    <link rel="stylesheet" href="styles/sections-2.css" />
+    <link rel="stylesheet" href="styles/pages.css" />
+  </head>
+  <body>
+    <a class="visually-hidden" href="#main">본문 바로가기</a>
+    <div class="scroll-progress" aria-hidden="true"></div>
+    <div class="cursor" aria-hidden="true"></div>
+    <div class="cursor-ring" aria-hidden="true"></div>
+
+    <header class="nav" id="nav">
+      <div class="container nav__inner">
+        <a class="wordmark" href="index.html" aria-label="춤마루 홈">춤마루<span class="wordmark__rom">CHOOMARU</span></a>
+        <nav class="nav__links" aria-label="주요 메뉴">
+          <a class="nav__link" href="about.html" data-en="About">소개</a>
+          <a class="nav__link" href="services.html" data-en="Services">서비스</a>
+          <a class="nav__link is-current" href="dna.html" aria-current="page" data-en="Dance DNA">춤 DNA</a>
+          <a class="nav__link" href="technology.html" data-en="Technology">기술</a>
+          <a class="nav__link" href="contact.html" data-en="Contact">문의</a>
+        </nav>
+        <div class="nav__actions">
+          <div class="lang-toggle" role="group" aria-label="언어 선택">
+            <button type="button" data-lang="ko" class="is-active">KR</button>
+            <button type="button" data-lang="en">EN</button>
+          </div>
+          <a class="btn btn-gold nav__cta magnetic" href="dna.html" data-en="DNA Test">춤 DNA 테스트</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="page-hero">
+        <div class="container">
+          <nav class="breadcrumb" aria-label="위치">
+            <a href="index.html" data-en="Home">홈</a><span class="sep">/</span>
+            <span data-en="Dance DNA">춤 DNA</span>
+          </nav>
+          <h1 class="page-hero__title serif" data-split data-en="Which dancer are you?">당신은 어떤 춤꾼인가요?</h1>
+          <p class="page-hero__lead" data-en="Twelve questions, eight types. Color here is not decoration — it classifies how you move.">
+            열두 개의 질문, 여덟 가지 유형. 여기서 색은 장식이 아니라 당신이
+            움직이는 방식의 분류입니다.
+          </p>
+          <p style="margin-top:2rem">
+            <a class="btn btn-gold magnetic" href="https://dna.choomaru.kr" data-en="Start the test now">지금 테스트 시작 <span class="arrow" aria-hidden="true">→</span></a>
+          </p>
+        </div>
+      </section>
+
+      <!-- ===== 8유형 갤러리 ===== -->
+      <section class="section section--paper dna">
+        <div class="container">
+          <div class="ed-head">
+            <h2 class="ed-head__title serif" data-en="The 8 Dance DNA Types">8가지 춤 DNA 유형</h2>
+            <p class="ed-head__meta" data-en="Drag through the eight — each with its own brush mark and color.">
+              여덟 유형을 드래그해 보세요 — 각자의 붓 자국과 색을 가집니다.
+            </p>
+          </div>
+        </div>
+
+        <ul class="dna__track" id="dna-track" aria-label="춤 DNA 유형 목록"></ul>
+
+        <div class="container">
+          <div class="dna__foot">
+            <span class="dna__hint" data-en="◂ Drag or scroll ▸">◂ 드래그하거나 스크롤 ▸</span>
+            <div class="dna__controls">
+              <button class="dna__arrow magnetic" type="button" data-dna="prev" aria-label="이전">‹</button>
+              <button class="dna__arrow magnetic" type="button" data-dna="next" aria-label="다음">›</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== 어떻게 진단하나 ===== -->
+      <section class="section section--paper-2">
+        <div class="container">
+          <div class="ed-head">
+            <h2 class="ed-head__title serif" data-en="How the diagnosis works">어떻게 진단하나요</h2>
+            <p class="ed-head__meta" data-en="A quiz now, your camera later — the type only gets sharper.">
+              지금은 퀴즈로, 나중엔 카메라로 — 유형은 점점 정교해집니다.
+            </p>
+          </div>
+          <div class="value-grid">
+            <div class="value-card" data-reveal>
+              <div class="value-card__num">01</div>
+              <h3 class="value-card__title" data-en="Answer 12 questions">12문항에 답하기</h3>
+              <p class="value-card__desc" data-en="Everyday situations, not dance jargon — anyone can answer in about a minute.">
+                무용 용어가 아닌 일상 상황 — 누구나 1분이면 답할 수 있습니다.
+              </p>
+            </div>
+            <div class="value-card" data-reveal style="--rd:80ms">
+              <div class="value-card__num">02</div>
+              <h3 class="value-card__title" data-en="Get your type">유형 받기</h3>
+              <p class="value-card__desc" data-en="One of eight types, with its brush mark, color, and a movement profile.">
+                여덟 유형 중 하나 — 붓 자국과 색, 그리고 움직임 프로필과 함께.
+              </p>
+            </div>
+            <div class="value-card" data-reveal style="--rd:160ms">
+              <div class="value-card__num">03</div>
+              <h3 class="value-card__title" data-en="Refine it in MU:ON">MU:ON에서 정교화</h3>
+              <p class="value-card__desc" data-en="In the app, pose AI watches you actually move and sharpens the result.">
+                앱에서는 자세 AI가 실제 움직임을 보고 결과를 더 정밀하게 다듬습니다.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--cine cta">
+        <div class="container container-narrow">
+          <h2 class="mega serif cta__title" data-split data-en="Discover your Dance DNA.">당신의 춤 DNA를 발견하세요.</h2>
+          <div class="cta__actions" data-reveal>
+            <a class="btn btn-gold magnetic" href="https://dna.choomaru.kr" data-en="Start the test">테스트 시작 <span class="arrow" aria-hidden="true">→</span></a>
+            <a class="btn btn-ghost magnetic" href="services.html#muon" data-en="Get MU:ON">MU:ON 받기</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container container-wide">
+        <div class="footer__mark" data-parallax="0.05" aria-hidden="true">춤마루</div>
+        <div class="footer__cols">
+          <div><p class="footer__tagline" data-en="Korean dance culture-tech. Carrying the tradition into today.">한국무용 컬처테크. 전통을 오늘의 몸짓으로 잇습니다.</p></div>
+          <div class="footer__col">
+            <h4 data-en="Services">서비스</h4>
+            <a href="services.html#muon" data-en="MU:ON App">MU:ON 앱</a>
+            <a href="services.html#muv" data-en="MU:V Store">MU:V 쇼핑몰</a>
+            <a href="dna.html" data-en="Dance DNA">춤 DNA 테스트</a>
+            <a href="technology.html" data-en="Technology">AI 기술</a>
+          </div>
+          <div class="footer__col">
+            <h4 data-en="Company">회사</h4>
+            <a href="about.html" data-en="About">소개</a>
+            <a href="technology.html" data-en="Technology">기술</a>
+            <a href="contact.html" data-en="Contact">문의</a>
+          </div>
+          <div class="footer__col">
+            <h4 data-en="Legal">정책</h4>
+            <a href="#" data-en="Privacy Policy">개인정보처리방침</a>
+            <a href="#" data-en="Terms of Service">이용약관</a>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <span>© 2026 춤마루 (Choomaru). All rights reserved.</span>
+          <span data-en="Reinterpreting Korean dance with AI.">한국의 몸짓을 AI로 잇습니다.</span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/i18n.js" defer></script>
+    <script src="js/motion.js" defer></script>
+    <script src="js/main.js" defer></script>
+  </body>
+</html>

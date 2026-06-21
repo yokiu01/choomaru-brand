@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <!-- 그루버: 소용돌이 - 리듬의 흐름 -->
+  <path d="M32 32
+           Q32 24, 40 24
+           Q48 24, 48 32
+           Q48 44, 32 44
+           Q16 44, 16 32
+           Q16 16, 32 12
+           Q52 8, 56 28
+           Q58 48, 40 56
+           Q20 62, 10 44"
+        stroke="currentColor"
+        stroke-width="4"
+        stroke-linecap="round"
+        fill="none"/>
+</svg>

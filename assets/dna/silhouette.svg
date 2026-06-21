@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <!-- 실루엣: 춤추는 자세의 우아한 곡선 -->
+  <!-- 몸의 S자 라인 -->
+  <path d="M32 8
+           Q40 16, 36 28
+           Q32 40, 40 48
+           Q44 52, 40 56"
+        stroke="currentColor"
+        stroke-width="4"
+        stroke-linecap="round"
+        fill="none"/>
+  <!-- 팔 라인 - 우아하게 뻗은 -->
+  <path d="M36 24
+           Q28 20, 16 16"
+        stroke="currentColor"
+        stroke-width="3"
+        stroke-linecap="round"
+        fill="none"/>
+  <path d="M38 28
+           Q46 24, 54 28"
+        stroke="currentColor"
+        stroke-width="3"
+        stroke-linecap="round"
+        fill="none"/>
+  <!-- 머리 -->
+  <circle cx="32" cy="10" r="5" stroke="currentColor" stroke-width="2.5" fill="none"/>
+  <!-- 발끝 포인트 -->
+  <circle cx="40" cy="56" r="2" fill="currentColor"/>
+</svg>
