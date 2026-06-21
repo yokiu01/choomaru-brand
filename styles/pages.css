@@ -326,6 +326,40 @@
 .svc__body .lead {
   margin-bottom: 1.25rem;
 }
+.svc__visual {
+  position: relative;
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+  aspect-ratio: 16 / 9;
+  box-shadow: var(--shadow-card);
+  border: 1px solid var(--color-line);
+  background-color: var(--ink-950);
+  transition: transform var(--dur) var(--ease-expo), box-shadow var(--dur) var(--ease-expo), border-color var(--dur) var(--ease-expo);
+}
+.svc__visual::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 50%, transparent 40%, rgba(11, 11, 18, 0.4) 100%);
+  pointer-events: none;
+  z-index: 2;
+}
+.svc__visual:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card-hover);
+  border-color: var(--gold);
+}
+.svc__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform var(--dur-slow) var(--ease-expo);
+}
+.svc__visual:hover .svc__img {
+  transform: scale(1.03);
+}
 .svc__link {
   display: inline-flex;
   align-items: center;
