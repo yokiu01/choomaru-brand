@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <!-- 정밀: 대나무 마디 - 섬세하고 정갈한 -->
+  <path d="M32 8 L32 56" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+  <path d="M32 20 Q38 22, 44 18" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+  <path d="M32 32 Q26 34, 20 30" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+  <path d="M32 44 Q40 46, 48 42" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/>
+  <!-- 마디 표현 -->
+  <ellipse cx="32" cy="20" rx="4" ry="1.5" fill="currentColor" opacity="0.6"/>
+  <ellipse cx="32" cy="32" rx="4" ry="1.5" fill="currentColor" opacity="0.6"/>
+  <ellipse cx="32" cy="44" rx="4" ry="1.5" fill="currentColor" opacity="0.6"/>
+</svg>

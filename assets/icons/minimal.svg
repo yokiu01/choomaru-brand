@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <!-- 미니멀: 초승달 - 단순하고 여백의 미 -->
+  <path d="M42 10
+           Q20 16, 16 32
+           Q12 48, 38 56
+           Q28 44, 28 32
+           Q28 20, 42 10 Z"
+        fill="currentColor"
+        opacity="0.9"/>
+</svg>

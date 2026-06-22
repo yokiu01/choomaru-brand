@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#1A1A2E">
+
+    <!-- SEO Meta Tags -->
+    <title>나의 춤 DNA 찾기 | MU:ON 춤 유형 테스트</title>
+    <meta name="description" content="12개 질문으로 알아보는 나의 춤 DNA! 파워풀, 그루버, 실루엣... 당신의 춤에는 어떤 DNA가 숨어있나요?">
+    <meta name="keywords" content="춤 테스트, 댄스 유형, MBTI, 성격 테스트, 한국무용, MU:ON">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://muon.dance/quiz.html">
+
+    <!-- Open Graph / SNS Share -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="나의 춤 DNA 찾기 | MU:ON">
+    <meta property="og:description" content="12개 질문으로 알아보는 나만의 춤 스타일! 지금 테스트해보세요.">
+    <meta property="og:image" content="https://muon.dance/assets/og-image.png">
+    <meta property="og:url" content="https://muon.dance/quiz.html">
+    <meta property="og:site_name" content="MU:ON">
+    <meta property="og:locale" content="ko_KR">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="나의 춤 DNA 찾기 | MU:ON">
+    <meta name="twitter:description" content="12개 질문으로 알아보는 나만의 춤 스타일!">
+    <meta name="twitter:image" content="https://muon.dance/assets/og-image.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon.png">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="quiz.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="quiz-nav">
+        <a href="index.html" class="quiz-nav-logo">MU:ON</a>
+        <div class="quiz-nav-links">
+            <a href="types.html" class="quiz-nav-link">춤 유형 소개</a>
+        </div>
+    </nav>
+
+    <!-- Animated Background -->
+    <div class="bg-shapes">
+        <div class="bg-shape bg-shape-1"></div>
+        <div class="bg-shape bg-shape-2"></div>
+        <div class="bg-shape bg-shape-3"></div>
+    </div>
+
+    <!-- Intro Screen - Immersive Story -->
+    <div class="intro-screen" id="introScreen">
+
+        <!-- Page 1: 스승의 등장 -->
+        <div class="intro-page intro-page-1 active" id="introPage1">
+            <div class="intro-container">
+                <div class="master-scene">
+                    <!-- 신비로운 분위기의 스승 실루엣 -->
+                    <div class="master-silhouette">
+                        <div class="master-glow"></div>
+                        <span class="master-icon">🌙</span>
+                    </div>
+
+                    <!-- 스승의 첫 마디 -->
+                    <div class="master-dialogue">
+                        <p class="dialogue-text typewriter" id="dialogue1">
+                            오랜만에 찾아온 손님이로구나...
+                        </p>
+                    </div>
+
+                    <!-- 다음으로 넘어가는 힌트 -->
+                    <button class="intro-next-btn" id="introNextBtn1">
+                        <span class="btn-text">다음</span>
+                        <span class="btn-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Page 2: 스승의 초대 -->
+        <div class="intro-page intro-page-2" id="introPage2">
+            <div class="intro-container">
+                <div class="master-scene">
+                    <div class="master-silhouette small">
+                        <span class="master-icon">🌙</span>
+                    </div>
+
+                    <div class="master-speech">
+                        <p class="speech-line" data-delay="0">
+                            모든 춤에는 <strong>고유한 결</strong>이 있지.
+                        </p>
+                        <p class="speech-line" data-delay="600">
+                            누군가는 폭풍 같은 <em>힘</em>으로,
+                        </p>
+                        <p class="speech-line" data-delay="1200">
+                            누군가는 물결 같은 <em>섬세함</em>으로,
+                        </p>
+                        <p class="speech-line" data-delay="1800">
+                            또 누군가는 바람 같은 <em>자유로움</em>으로...
+                        </p>
+                        <p class="speech-line speech-highlight" data-delay="2600">
+                            네 안에 잠든 춤의 DNA,<br>내가 찾아주마.
+                        </p>
+                    </div>
+
+                    <!-- 여정 시작 버튼 -->
+                    <div class="journey-start" id="journeyStart">
+                        <p class="journey-info">
+                            <span class="info-dot"></span>
+                            12개의 장면을 보여줄 것이다
+                        </p>
+                        <button class="intro-start-btn" id="goToSkillBtn">
+                            <span>시작하기</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Page 3: 숙련도 질문 -->
+        <div class="intro-page intro-page-3" id="introPage3">
+            <div class="intro-container">
+                <div class="skill-level-scene">
+                    <div class="skill-question">
+                        <h2 class="skill-title">춤 경험이 있으신가요?</h2>
+                        <p class="skill-subtitle">정확한 결과를 위해 알려주세요</p>
+                    </div>
+
+                    <div class="skill-options" id="skillOptions">
+                        <button class="skill-option" data-skill="none">
+                            <span class="skill-icon">🌱</span>
+                            <div class="skill-text">
+                                <span class="skill-label">전혀 안 해봤어요</span>
+                                <span class="skill-desc">춤을 배운 적이 없어요</span>
+                            </div>
+                        </button>
+                        <button class="skill-option" data-skill="beginner">
+                            <span class="skill-icon">🌿</span>
+                            <div class="skill-text">
+                                <span class="skill-label">조금 해봤어요</span>
+                                <span class="skill-desc">취미로 가볍게 배워본 정도</span>
+                            </div>
+                        </button>
+                        <button class="skill-option" data-skill="intermediate">
+                            <span class="skill-icon">🌳</span>
+                            <div class="skill-text">
+                                <span class="skill-label">꽤 해봤어요</span>
+                                <span class="skill-desc">1년 이상 배웠거나 동아리 활동</span>
+                            </div>
+                        </button>
+                        <button class="skill-option" data-skill="advanced">
+                            <span class="skill-icon">🌟</span>
+                            <div class="skill-text">
+                                <span class="skill-label">전문적으로 해요</span>
+                                <span class="skill-desc">전공 또는 프로 수준</span>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Quiz Container -->
+    <div class="quiz-container" id="quizContainer" style="display: none;">
+        <!-- Header with Progress -->
+        <header class="quiz-header">
+            <button class="back-button" id="backBtn" aria-label="이전 질문" disabled>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M19 12H5M12 19l-7-7 7-7"/>
+                </svg>
+            </button>
+
+            <div class="progress-section">
+                <span class="progress-emoji" id="progressEmoji">🌱</span>
+                <div class="progress-bar-container">
+                    <div class="progress-bar" id="progressBar" style="width: 0%"></div>
+                </div>
+                <span class="progress-text" id="progressText">0 / 12</span>
+            </div>
+
+            <button class="close-button" id="closeBtn" aria-label="테스트 종료">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 6L6 18M6 6l12 12"/>
+                </svg>
+            </button>
+        </header>
+
+        <!-- Question Area -->
+        <main class="question-wrapper" id="questionWrapper">
+            <!-- Question cards will be dynamically inserted here -->
+        </main>
+    </div>
+
+    <!-- Exit Confirmation Modal -->
+    <div class="share-modal" id="exitModal">
+        <div class="share-modal-content" style="padding-bottom: 32px;">
+            <div class="share-modal-header">
+                <h3 class="share-modal-title">테스트를 종료할까요?</h3>
+                <button class="share-modal-close" id="exitModalClose" aria-label="닫기">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M18 6L6 18M6 6l12 12"/>
+                    </svg>
+                </button>
+            </div>
+            <p style="color: #6c757d; margin-bottom: 24px; font-size: 15px;">
+                지금 나가면 진행 중인 테스트가 초기화됩니다.
+            </p>
+            <div style="display: flex; gap: 12px;">
+                <button class="btn btn-secondary" id="continueTestBtn" style="flex: 1; background: #f1f3f5; color: #495057;">
+                    계속하기
+                </button>
+                <button class="btn btn-primary" id="exitTestBtn" style="flex: 1; background: #FF6B6B;">
+                    종료하기
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script type="module" src="./js/quiz-ui.js"></script>
+</body>
+</html>

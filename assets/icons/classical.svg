@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <!-- 클래시컬: 부채 모양 - 한국 전통춤의 상징 -->
+  <path d="M32 56 L32 36" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+  <!-- 부채살 -->
+  <path d="M32 36 Q12 28, 10 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.7"/>
+  <path d="M32 36 Q18 24, 18 10" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" fill="none" opacity="0.8"/>
+  <path d="M32 36 Q28 20, 32 8" stroke="currentColor" stroke-width="3" stroke-linecap="round" fill="none"/>
+  <path d="M32 36 Q42 24, 46 10" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" fill="none" opacity="0.8"/>
+  <path d="M32 36 Q52 28, 54 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.7"/>
+  <!-- 부채 상단 곡선 -->
+  <path d="M10 12 Q32 4, 54 12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+</svg>

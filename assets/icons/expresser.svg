@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <!-- 표현자: 흐르는 붓질 - 감정의 흐름 -->
+  <path d="M8 40
+           Q16 20, 32 24
+           Q48 28, 40 44
+           Q32 58, 20 48
+           Q12 42, 24 32
+           Q36 22, 52 28"
+        stroke="currentColor"
+        stroke-width="4"
+        stroke-linecap="round"
+        fill="none"/>
+  <!-- 점 - 감정의 방울 -->
+  <circle cx="52" cy="28" r="3" fill="currentColor"/>
+</svg>
