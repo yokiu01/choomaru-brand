@@ -239,6 +239,27 @@
   color: var(--gold);
 }
 
+/* --- 기사식 인용 (골드 좌측 바) --- */
+.pull {
+  font-family: var(--font-serif);
+  font-size: clamp(1.25rem, 2vw, 1.6rem);
+  line-height: 1.55;
+  font-weight: 700;
+  border-left: 3px solid var(--gold-deep);
+  padding: 0.4rem 0 0.4rem 1.5rem;
+  margin: 2rem 0;
+  max-width: 34ch;
+}
+.pull .em {
+  color: var(--gold-dark);
+}
+.section--cine .pull {
+  border-color: var(--gold);
+}
+.section--cine .pull .em {
+  color: var(--gold);
+}
+
 /* --- 큰 인용/철학 --- */
 .quote-block {
   text-align: center;
