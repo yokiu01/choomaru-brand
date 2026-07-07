@@ -180,14 +180,25 @@
   /* ---------- word-split reveal ---------- */
   let splitObserver = null;
   function splitOne(el) {
-    const text = el.textContent.trim();
-    const words = text.split(/\s+/);
-    el.innerHTML = words
-      .map((w, i) => {
-        const d = i * 55;
-        return `<span class="word"><span class="word__inner" style="--wd:${d}ms">${w}</span></span>`;
+    const lines = el.innerHTML.split(/<br\s*\/?>/i);
+    let wordIndex = 0;
+    el.innerHTML = lines
+      .map((line) => {
+        const tempDiv = document.createElement("div");
+        tempDiv.innerHTML = line;
+        const text = tempDiv.textContent.trim();
+        if (!text) return "";
+        const words = text.split(/\s+/);
+        return words
+          .map((w) => {
+            const d = wordIndex * 55;
+            wordIndex++;
+            return `<span class="word"><span class="word__inner" style="--wd:${d}ms">${w}</span></span>`;
+          })
+          .join(" ");
       })
-      .join(" ");
+      .filter((lineHtml) => lineHtml !== "")
+      .join("<br />");
   }
   function initSplit() {
     const els = document.querySelectorAll("[data-split]");
