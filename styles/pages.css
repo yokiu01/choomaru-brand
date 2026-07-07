@@ -444,6 +444,13 @@
 .svc__link:hover .arrow {
   transform: translateX(5px);
 }
+.svc__status {
+  display: inline-block;
+  margin-top: 1.25rem;
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
 
 /* --- 반응형 --- */
 @media (max-width: 860px) {
