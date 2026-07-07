@@ -10,7 +10,7 @@
 | 홈 | `index.html` | 브랜드 소개 · 서비스 미리보기 · 전통×전문성 |
 | 소개 | `about.html` | 미션 · 전통의 깊이(기본동작·18감정) · 전문성 · 연혁 |
 | 서비스 | `services.html` | MU:ON · MU:V · 춤 DNA · AI API · 데모 |
-| 춤 DNA | `dna.html` | 8유형 갤러리 · 진단 방식 |
+| 춤 DNA | `types.html` | 8유형 상세 소개 (dance-dna-types 이식) |
 | 기술 | `technology.html` | 파이프라인 · 데이터셋/라벨링 · 특허/연구 |
 | 문의 | `contact.html` | 제휴·투자·교육 문의 폼 |
 

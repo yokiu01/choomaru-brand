@@ -239,6 +239,60 @@
   color: var(--gold);
 }
 
+/* --- 아트 패널 (플레이스홀더 대체 — 먹 위의 금) --- */
+.art-panel {
+  position: relative;
+  background: var(--ink-950);
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-card);
+}
+.art-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+      ellipse 70% 60% at 30% 85%,
+      rgba(200, 162, 74, 0.14),
+      transparent 60%
+    ),
+    radial-gradient(ellipse 50% 45% at 85% 10%, rgba(46, 90, 139, 0.1), transparent 60%);
+  pointer-events: none;
+}
+.art-panel__mask {
+  position: relative;
+  width: 58%;
+  aspect-ratio: 1;
+  background: var(--gold);
+  opacity: 0.88;
+  -webkit-mask-position: center;
+  -webkit-mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
+  mask-repeat: no-repeat;
+}
+.art-panel__mask--expresser {
+  -webkit-mask-image: url("../assets/dna/expresser.svg");
+  mask-image: url("../assets/dna/expresser.svg");
+}
+.art-panel__skeleton {
+  position: relative;
+  width: 54%;
+  height: auto;
+}
+.art-panel__caption {
+  position: absolute;
+  left: 1.4rem;
+  bottom: 1.1rem;
+  font-size: var(--text-xs);
+  letter-spacing: 0.14em;
+  color: rgba(255, 255, 255, 0.45);
+}
+
 /* --- 기사식 인용 (골드 좌측 바) --- */
 .pull {
   font-family: var(--font-serif);

@@ -61,7 +61,7 @@
         <nav class="nav__links" aria-label="주요 메뉴">
           <a class="nav__link" href="about.html" data-en="About">소개</a>
           <a class="nav__link" href="services.html" data-en="Services">서비스</a>
-          <a class="nav__link" href="dna.html" data-en="Dance DNA">춤 DNA</a>
+          <a class="nav__link" href="types.html" data-en="Dance DNA">춤 DNA</a>
           <a class="nav__link" href="technology.html" data-en="Technology">기술</a>
           <a class="nav__link" href="contact.html" data-en="Contact">문의</a>
         </nav>
@@ -70,7 +70,7 @@
             <button type="button" data-lang="ko" class="is-active">KR</button>
             <button type="button" data-lang="en">EN</button>
           </div>
-          <a class="btn btn-gold nav__cta magnetic" href="dna.html" data-en="DNA Test"
+          <a class="btn btn-gold nav__cta magnetic" href="quiz.html" data-en="DNA Test"
             >춤 DNA 테스트</a
           >
         </div>
@@ -80,13 +80,13 @@
     <main id="main">
       <!-- ===== HERO ===== -->
       <section class="hero" id="hero" aria-labelledby="hero-title">
-        <div class="hero__media" data-parallax="-0.12" aria-hidden="true">
-          <div class="placeholder placeholder--dark placeholder--hero">
-            <span class="placeholder__label">
-              <strong>풀블리드 히어로 영상 자리</strong>
-              한국 전통무용 슬로모션 · 16:9 · mp4/webm (자동재생·무음·loop)
-            </span>
-          </div>
+        <div class="hero__art" data-parallax="-0.08" aria-hidden="true">
+          <span class="hero__glyph serif">舞</span>
+          <svg class="hero__curves" viewBox="0 0 900 900" fill="none" preserveAspectRatio="xMidYMid meet">
+            <path d="M40 820 C 250 590, 190 400, 430 310 C 650 228, 710 130, 860 50" stroke="#c8a24a" stroke-width="1.6" opacity="0.5" />
+            <path d="M110 872 C 330 650, 290 440, 520 350 C 730 268, 780 170, 892 100" stroke="#c8a24a" stroke-width="1.1" opacity="0.3" />
+            <path d="M-10 752 C 190 540, 150 350, 370 265 C 570 190, 640 95, 800 8" stroke="#c8a24a" stroke-width="0.8" opacity="0.18" />
+          </svg>
         </div>
         <span class="hero__glow" aria-hidden="true"></span>
 
@@ -165,7 +165,7 @@
               <span class="eco-row__go" data-en="Learn more">자세히 <span class="arrow" aria-hidden="true">→</span></span>
             </a>
 
-            <a class="eco-row" href="dna.html" data-reveal>
+            <a class="eco-row" href="quiz.html" data-reveal>
               <span class="eco-row__num">03</span>
               <span class="eco-row__name">
                 <span class="sub" data-en="Web · Quiz">웹 · 진단</span>
@@ -205,8 +205,9 @@
           </div>
 
           <article class="feature">
-            <div class="feature__media placeholder" data-parallax="0.06" aria-hidden="true">
-              <span class="placeholder__label"><strong>전통 무용 이미지</strong>한삼·치맛자락의 곡선이 살아 있는 동작 컷</span>
+            <div class="feature__media art-panel" data-parallax="0.06" aria-hidden="true">
+              <span class="art-panel__mask art-panel__mask--expresser"></span>
+              <span class="art-panel__caption">한삼의 곡선 — 표현자의 붓 자국</span>
             </div>
             <div class="feature__body">
               <p class="kicker feature__kicker" data-en="The Source">미감의 원천</p>
@@ -222,8 +223,25 @@
           </article>
 
           <article class="feature feature--reverse">
-            <div class="feature__media placeholder" data-parallax="0.06" aria-hidden="true">
-              <span class="placeholder__label"><strong>AI 분석 시각화</strong>관절 오버레이 · 감정 분류 데모</span>
+            <div class="feature__media art-panel" data-parallax="0.06" aria-hidden="true">
+              <svg class="art-panel__skeleton" viewBox="0 0 200 200" fill="none">
+                <g stroke="#c8a24a" stroke-width="1.1" opacity="0.55">
+                  <path d="M100 52 L100 38" /><path d="M82 60 L100 52 L118 60" />
+                  <path d="M82 60 L60 44 L46 24" /><path d="M118 60 L140 48 L158 30" />
+                  <path d="M100 52 L100 86" /><path d="M88 104 L100 86 L112 104" />
+                  <path d="M88 104 L78 138 L70 172" /><path d="M112 104 L122 140 L132 174" />
+                </g>
+                <g fill="#c8a24a">
+                  <circle cx="100" cy="34" r="6" opacity="0.9" />
+                  <circle cx="100" cy="52" r="3" /><circle cx="82" cy="60" r="3" /><circle cx="118" cy="60" r="3" />
+                  <circle cx="60" cy="44" r="3" /><circle cx="140" cy="48" r="3" />
+                  <circle cx="46" cy="24" r="3.5" /><circle cx="158" cy="30" r="3.5" />
+                  <circle cx="100" cy="86" r="3" /><circle cx="88" cy="104" r="3" /><circle cx="112" cy="104" r="3" />
+                  <circle cx="78" cy="138" r="3" /><circle cx="122" cy="140" r="3" />
+                  <circle cx="70" cy="172" r="3.5" /><circle cx="132" cy="174" r="3.5" />
+                </g>
+              </svg>
+              <span class="art-panel__caption">33개 관절 — 몸짓을 읽는 눈</span>
             </div>
             <div class="feature__body">
               <p class="kicker feature__kicker" data-en="The Engine">기술</p>
@@ -273,7 +291,7 @@
             당신의 춤 DNA부터 시작하세요.
           </h2>
           <div class="cta__actions" data-reveal>
-            <a class="btn btn-gold magnetic" href="dna.html" data-en="Take the test"
+            <a class="btn btn-gold magnetic" href="quiz.html" data-en="Take the test"
               >춤 DNA 테스트 <span class="arrow" aria-hidden="true">→</span></a
             >
             <a class="btn btn-ghost magnetic" href="services.html" data-en="Explore services">서비스 둘러보기</a>
@@ -297,7 +315,7 @@
             <a href="services.html#muon" data-en="MU:ON App">MU:ON 앱</a>
             <a href="services.html#muv" data-en="MU:V Brand">MU:V 브랜드</a>
             <a href="services.html#sorimaru" data-en="Sori Maru AI">소리마루 AI</a>
-            <a href="dna.html" data-en="Dance DNA">춤 DNA 테스트</a>
+            <a href="quiz.html" data-en="Dance DNA">춤 DNA 테스트</a>
             <a href="technology.html" data-en="Technology">AI 기술</a>
           </div>
           <div class="footer__col">
