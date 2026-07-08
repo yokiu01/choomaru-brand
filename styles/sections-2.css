@@ -193,7 +193,6 @@
 .pipeline__step span {
   font-size: var(--text-xs);
   color: rgba(255, 255, 255, 0.5);
-  margin-left: auto;
 }
 .tech__note {
   margin-top: 2rem;
@@ -274,6 +273,7 @@
   overflow: hidden;
 }
 .cta__title {
+  font-weight: 400;
   margin-bottom: 2.25rem;
 }
 .cta__actions {
@@ -413,7 +413,7 @@
 }
 .footer__mark {
   font-family: var(--font-serif);
-  font-weight: 700;
+  font-weight: 400;
   font-size: clamp(3.5rem, 11vw, 8.5rem);
   line-height: 0.9;
   letter-spacing: -0.04em;
