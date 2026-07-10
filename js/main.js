@@ -107,7 +107,7 @@
     const msg = (key) => {
       const en = lang() === "en";
       return {
-        success: en ? "Thanks — we'll be in touch soon." : "감사합니다 — 곧 연락드리겠습니다.",
+        success: en ? "Thanks. We'll be in touch soon." : "감사합니다. 곧 연락드리겠습니다.",
         fail: en ? "Please check the highlighted fields." : "표시된 항목을 확인해 주세요.",
       }[key];
     };
