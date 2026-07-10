@@ -98,19 +98,38 @@
   background: var(--gold);
   color: var(--ink-950);
 }
+/* 라이트(한지) 히어로 위 nav — 스크롤 전에도 먹색 텍스트 */
+.nav--paper:not(.is-scrolled) .wordmark,
+.nav--paper:not(.is-scrolled) .nav__link {
+  color: var(--paper-ink);
+}
+.nav--paper:not(.is-scrolled) .lang-toggle {
+  border-color: rgba(21, 21, 31, 0.25);
+}
+.nav--paper:not(.is-scrolled) .lang-toggle button {
+  color: var(--gray-600);
+}
+.nav--paper:not(.is-scrolled) .lang-toggle button.is-active {
+  color: var(--ink-950);
+}
+.nav.nav--paper:not(.is-scrolled) .wordmark__rom,
+.nav.nav--paper:not(.is-scrolled) .nav__link.is-current {
+  color: var(--gold-dark);
+}
 
-/* --- HERO (cinematic) --- */
+/* --- HERO (수묵 × 한지) --- */
 .hero {
   position: relative;
   min-height: 100svh;
   display: flex;
   align-items: flex-end;
-  background: var(--ink-950);
-  color: #fff;
+  /* 수묵 무용수 이미지의 한지 톤과 동일한 베이스 */
+  background: #e9e1d7;
+  color: var(--paper-ink);
   overflow: hidden;
   padding-bottom: clamp(3rem, 7vw, 6rem);
 }
-/* 히어로 아트 — 舞 글리프 + 한삼 곡선 라인 */
+/* 히어로 아트 — 수묵 무용수, 오른쪽에서 종이에 스며들 듯 */
 .hero__art {
   position: absolute;
   inset: 0;
@@ -118,37 +137,43 @@
   overflow: hidden;
   pointer-events: none;
 }
-.hero__glyph {
+.hero__figure {
   position: absolute;
-  right: 2vw;
-  top: 46%;
-  transform: translateY(-50%);
-  font-size: clamp(14rem, 36vw, 32rem);
-  font-weight: 700;
-  line-height: 1;
-  color: transparent;
-  -webkit-text-stroke: 1.2px rgba(200, 162, 74, 0.26);
-  user-select: none;
-}
-.hero__curves {
-  position: absolute;
-  right: -4vw;
-  top: 48%;
-  transform: translateY(-50%);
-  width: min(60vw, 860px);
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: auto;
   aspect-ratio: 1;
-  height: auto;
+  object-fit: cover;
+  /* 좌·하단 가장자리를 배경 한지로 번지게 */
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 24%),
+    linear-gradient(0deg, transparent 2%, #000 28%);
+  -webkit-mask-composite: source-in;
+  mask-image: linear-gradient(90deg, transparent 0%, #000 24%),
+    linear-gradient(0deg, transparent 2%, #000 28%);
+  mask-composite: intersect;
+}
+/* 중간 폭: 텍스트 컬럼과 겹치기 시작 — 오른쪽으로 밀고 옅게 */
+@media (max-width: 1100px) {
+  .hero__figure {
+    right: -10vw;
+    opacity: 0.8;
+  }
+}
+@media (max-width: 900px) {
+  .hero__figure {
+    opacity: 0.65;
+  }
+  /* 먹이 옅어져 흰 코너 텍스트가 안 읽힘 */
+  .hero__corner {
+    display: none;
+  }
 }
 @media (max-width: 640px) {
-  .hero__glyph {
-    font-size: 15rem;
-    right: -8vw;
-    -webkit-text-stroke-color: rgba(200, 162, 74, 0.16);
-  }
-  .hero__curves {
-    width: 120vw;
-    right: -30vw;
-    opacity: 0.6;
+  .hero__figure {
+    height: min(60svh, 110vw);
+    right: -14vw;
+    opacity: 0.62;
   }
 }
 .hero__glow {
@@ -162,7 +187,7 @@
   bottom: -20vw;
   background: radial-gradient(
     circle,
-    var(--gold-glow),
+    rgba(200, 162, 74, 0.16),
     transparent 60%
   );
   filter: blur(40px);
@@ -184,11 +209,11 @@
   font-style: italic;
 }
 .hero__meta {
+  /* 오른쪽은 수묵 아트 자리 — 텍스트·CTA는 왼쪽 한 컬럼으로 */
   display: flex;
-  flex-wrap: wrap;
-  align-items: flex-end;
-  justify-content: space-between;
-  gap: 2rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2.25rem;
 }
 .hero__lead {
   max-width: 42ch;
@@ -207,7 +232,8 @@
   font-size: var(--text-xs);
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.55);
+  /* 먹 자락(다크) 위에 놓이므로 한지색으로 */
+  color: rgba(250, 248, 245, 0.78);
   line-height: 1.9;
 }
 

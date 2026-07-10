@@ -8,7 +8,7 @@
       name="description"
       content="춤마루(Choomaru)는 20년을 춤춘 무용수가 세운 디자인 기업입니다. 한국무용의 곡선과 아름다움을 현대적으로 풀어냅니다. 라이프스타일 브랜드 MU:V, 교육 앱 MU:ON, 춤 DNA로 확장합니다."
     />
-    <meta name="theme-color" content="#0b0b12" />
+    <meta name="theme-color" content="#e9e1d7" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="춤마루 | 한국무용을 디자인하는 회사" />
     <meta
@@ -27,6 +27,12 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"
       crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="assets/hero-ink-dancer.jpg"
+      fetchpriority="high"
     />
     <link rel="stylesheet" href="styles/tokens.css" />
     <link rel="stylesheet" href="styles/typography.css" />
@@ -53,7 +59,7 @@
     <div class="cursor-ring" aria-hidden="true"></div>
 
     <!-- ===== nav ===== -->
-    <header class="nav" id="nav">
+    <header class="nav nav--paper" id="nav">
       <div class="container nav__inner">
         <a class="wordmark" href="index.html" aria-label="춤마루 홈"
           >춤마루<span class="wordmark__rom">CHOOMARU</span></a
@@ -81,12 +87,15 @@
       <!-- ===== HERO ===== -->
       <section class="hero" id="hero" aria-labelledby="hero-title">
         <div class="hero__art" data-parallax="-0.08" aria-hidden="true">
-          <span class="hero__glyph serif">舞</span>
-          <svg class="hero__curves" viewBox="0 0 900 900" fill="none" preserveAspectRatio="xMidYMid meet">
-            <path d="M40 820 C 250 590, 190 400, 430 310 C 650 228, 710 130, 860 50" stroke="#c8a24a" stroke-width="1.6" opacity="0.5" />
-            <path d="M110 872 C 330 650, 290 440, 520 350 C 730 268, 780 170, 892 100" stroke="#c8a24a" stroke-width="1.1" opacity="0.3" />
-            <path d="M-10 752 C 190 540, 150 350, 370 265 C 570 190, 640 95, 800 8" stroke="#c8a24a" stroke-width="0.8" opacity="0.18" />
-          </svg>
+          <img
+            class="hero__figure"
+            src="assets/hero-ink-dancer.jpg"
+            alt=""
+            width="1254"
+            height="1254"
+            loading="eager"
+            fetchpriority="high"
+          />
         </div>
         <span class="hero__glow" aria-hidden="true"></span>
 
@@ -112,7 +121,7 @@
               <a class="btn btn-gold magnetic" href="about.html" data-en="About Choomaru"
                 >춤마루 알아보기 <span class="arrow" aria-hidden="true">→</span></a
               >
-              <a class="btn btn-ghost magnetic" href="services.html" data-en="Services">서비스 보기</a>
+              <a class="btn btn-ghost-dark magnetic" href="services.html" data-en="Services">서비스 보기</a>
             </div>
           </div>
         </div>
