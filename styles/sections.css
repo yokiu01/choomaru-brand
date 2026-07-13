@@ -147,11 +147,12 @@
   width: auto;
   aspect-ratio: 1;
   object-fit: cover;
-  /* 좌·하단 가장자리를 배경 한지로 번지게 */
-  -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 24%),
+  /* 좌우반전 — 마스크는 로컬 좌표라 반전 후 좌측이 되는 쪽(270deg)을 페더링 */
+  transform: scaleX(-1);
+  -webkit-mask-image: linear-gradient(270deg, transparent 0%, #000 24%),
     linear-gradient(0deg, transparent 2%, #000 28%);
   -webkit-mask-composite: source-in;
-  mask-image: linear-gradient(90deg, transparent 0%, #000 24%),
+  mask-image: linear-gradient(270deg, transparent 0%, #000 24%),
     linear-gradient(0deg, transparent 2%, #000 28%);
   mask-composite: intersect;
 }
@@ -234,8 +235,8 @@
   font-size: var(--text-xs);
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  /* 먹 자락(다크) 위에 놓이므로 한지색으로 */
-  color: rgba(250, 248, 245, 0.78);
+  /* 반전 후 밝은 종이 위에 놓이므로 먹색으로 */
+  color: rgba(21, 21, 31, 0.55);
   line-height: 1.9;
 }
 
