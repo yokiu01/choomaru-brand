@@ -116,6 +116,9 @@
   order: 2;
 }
 .feature__media {
+  /* width를 명시해야 min-height가 aspect-ratio를 타고 폭을 밀어내지 않음 */
+  width: 100%;
+  min-width: 0;
   min-height: 340px;
   aspect-ratio: 5 / 4;
 }

@@ -127,6 +127,8 @@
   background: #e9e1d7;
   color: var(--paper-ink);
   overflow: hidden;
+  /* 납작한 창에서 콘텐츠가 nav(80px)와 겹치지 않게 */
+  padding-top: calc(80px + 1.5rem);
   padding-bottom: clamp(3rem, 7vw, 6rem);
 }
 /* 히어로 아트 — 수묵 무용수, 오른쪽에서 종이에 스며들 듯 */

@@ -218,6 +218,16 @@ h1, h2, h3, h4 {
     align-items: center;
 }
 
+/* 상단 중앙 메뉴 (메인 사이트와 동일 구성) */
+.site-nav-menu {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: var(--space-6);
+    align-items: center;
+}
+
 .site-nav-link {
     font-size: 14px;
     font-weight: 500;
@@ -276,6 +286,10 @@ h1, h2, h3, h4 {
     }
 
     .site-nav-link:not(.site-nav-link--cta) {
+        display: none;
+    }
+
+    .site-nav-menu {
         display: none;
     }
 
