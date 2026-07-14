@@ -510,7 +510,7 @@ h1, h2, h3, h4 {
 
 .type-card {
     display: grid;
-    grid-template-columns: 140px 1fr;
+    grid-template-columns: 140px 1fr minmax(170px, 200px);
     gap: var(--space-8);
     background: var(--white);
     border: 1px solid var(--gray-200);
@@ -700,6 +700,117 @@ h1, h2, h3, h4 {
 
 .type-8 .type-color-bar { background: var(--type-8); }
 .type-8 .type-name { color: var(--type-8); }
+
+/* Type Demo Video (facade → YouTube Shorts) */
+.type-card--no-video {
+    grid-template-columns: 140px 1fr;
+}
+
+.type-video {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    align-self: start;
+}
+
+.type-video__tabs {
+    display: flex;
+    gap: 6px;
+}
+
+.type-video__tab {
+    font-family: 'Pretendard', sans-serif;
+    font-size: 12px;
+    letter-spacing: 1px;
+    padding: 4px 14px;
+    border: 1px solid var(--gray-300);
+    border-radius: 999px;
+    background: var(--white);
+    color: var(--gray-600);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.type-video__tab.is-active {
+    background: var(--ink-800);
+    border-color: var(--ink-800);
+    color: var(--white);
+}
+
+.type-video__tab:hover:not(.is-active) {
+    border-color: var(--gray-500);
+    color: var(--ink-800);
+}
+
+.type-video__stage {
+    position: relative;
+    display: block;
+    width: 100%;
+    aspect-ratio: 9 / 16;
+    padding: 0;
+    border: none;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    cursor: pointer;
+    background: var(--ink-900);
+}
+
+.type-video__thumb {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform var(--transition-slow);
+}
+
+.type-video__stage:hover .type-video__thumb {
+    transform: scale(1.04);
+}
+
+.type-video__play {
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.55);
+    display: grid;
+    place-items: center;
+    transition: background var(--transition-fast);
+}
+
+.type-video__play::after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 9px 0 9px 15px;
+    border-color: transparent transparent transparent var(--white);
+    margin-left: 3px;
+}
+
+.type-video__stage:hover .type-video__play,
+.type-video__stage:focus-visible .type-video__play {
+    background: var(--gold);
+}
+
+.type-video__frame {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 9 / 16;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    background: #000;
+}
+
+.type-video__frame iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
 
 /* ============================================================
    Summary Table Section
@@ -893,10 +1004,17 @@ h1, h2, h3, h4 {
         gap: var(--space-3);
     }
 
-    .type-card {
+    .type-card,
+    .type-card--no-video {
         grid-template-columns: 1fr;
         gap: var(--space-5);
         padding: var(--space-6);
+    }
+
+    .type-video {
+        width: 100%;
+        max-width: 240px;
+        margin: 0 auto;
     }
 
     .type-header {
