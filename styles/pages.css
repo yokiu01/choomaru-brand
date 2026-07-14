@@ -83,7 +83,8 @@
 
 /* --- prose / 인트로 --- */
 .prose {
-  max-width: 62ch;
+  /* lede 첫 문장(한국무용은 … 아닙니다.)이 한 줄에 들어가는 폭 */
+  max-width: 44rem;
 }
 .prose p {
   margin-bottom: 1.25rem;
@@ -240,6 +241,90 @@
 }
 .section--cine .term__name .rom {
   color: var(--gold);
+}
+
+/* --- 18 정서 그리드 (about) — 6갈래 × 3정서 --- */
+.emotion-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(0.75rem, 1.5vw, 1.25rem);
+}
+.emotion-card {
+  display: flex;
+  flex-direction: column;
+  padding: clamp(1.25rem, 2vw, 1.75rem);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: var(--radius-card);
+  transition: transform var(--dur) var(--ease-expo),
+    border-color var(--dur) var(--ease-expo),
+    background-color var(--dur) var(--ease-expo);
+}
+.emotion-card:hover {
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(200, 162, 74, 0.55);
+}
+.emotion-card__head {
+  display: flex;
+  align-items: baseline;
+  gap: 0.65rem;
+  padding-bottom: 0.9rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+}
+.emotion-card__num {
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: var(--gold);
+  font-variant-numeric: tabular-nums;
+}
+.emotion-card__cat {
+  font-size: var(--text-sm);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: rgba(255, 255, 255, 0.85);
+}
+.emotion-card__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.emotion-card__list li {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.7rem 0;
+}
+.emotion-card__list li + li {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+.emotion-card__ko {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--white);
+}
+.emotion-card__rom {
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.45);
+  transition: color var(--dur) var(--ease-expo);
+}
+.emotion-card:hover .emotion-card__rom {
+  color: var(--gold);
+}
+@media (max-width: 900px) {
+  .emotion-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 560px) {
+  .emotion-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* --- 아트 패널 (플레이스홀더 대체 — 먹 위의 금) --- */

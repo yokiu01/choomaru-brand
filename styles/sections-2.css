@@ -430,6 +430,12 @@
   padding-top: 2.5rem;
   border-top: 1px solid rgba(255, 255, 255, 0.14);
 }
+.footer__eyebrow {
+  font-size: 0.68rem;
+  letter-spacing: 0.22em;
+  line-height: 1.6;
+  margin-bottom: 0.85rem;
+}
 .footer__tagline {
   font-size: var(--text-sm);
   max-width: 32ch;
